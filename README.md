@@ -1,5 +1,5 @@
 # Automated-Trading-Strategy-Optimization-Using-Multi-Modal-Reinforcement-Learning-1
-🧠 Learning Objectives
+# Learning Objectives
 This project will help you:
 
 Understand and implement Linear Regression, Logistic Regression, and K-Nearest Neighbors (KNN)
@@ -8,11 +8,9 @@ Fetch and process real-world stock data using the yfinance library
 
 Apply feature engineering and machine learning for stock price prediction and movement classification
 
-🔧 Setup
-Install Requirements
-
+# Setup
 pip install yfinance scikit-learn pandas matplotlib seaborn
-Import Modules
+
 
 import yfinance as yf
 import pandas as pd
@@ -24,13 +22,16 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import mean_squared_error, accuracy_score, confusion_matrix
 from sklearn.model_selection import train_test_split
 
-#Part 1: Downloading Stock Data
+
+# Part 1: Downloading Stock Data
+
 Task 1.1: Fetch 1-Year Daily Data
 ticker = "AAPL"  # You can also try "TCS.NS", "RELIANCE.NS", "TSLA", etc.
 data = yf.download(ticker, period="1y")
 data.head()
 
-#Part 2: Linear Regression – Predicting Next Day’s Close Price
+
+# Part 2: Linear Regression – Predicting Next Day’s Close Price
 Task 2.1: Create Target Variable
 data["Next_Close"] = data["Close"].shift(-1)
 data.dropna(inplace=True)
@@ -52,7 +53,7 @@ plt.plot(y_pred, label='Predicted')
 plt.legend()
 plt.title('Linear Regression - Next Day Close Price')
 plt.show()
- #Part 3: Logistic Regression – Predicting Price Movement
+ # Part 3: Logistic Regression – Predicting Price Movement
 Task 3.1: Define Binary Target
 data["Target"] = (data["Next_Close"] > data["Close"]).astype(int)
 Task 3.2: Train Logistic Regression Model
