@@ -93,3 +93,50 @@ Apply PCA before running KNN to reduce dimensions
  4.  Code for KNN with varying k values
  5.   Answered bonus questions (optional)
 
+# 📈 Automated Trading Strategy Optimization
+**Using Multi-Modal Supervised Learning (Linear, KNN, CNN, LSTM)**
+
+## 🔍 Overview
+This project focuses on predicting stock price movements using machine learning and deep learning models. The ultimate aim is to build an intelligent trading strategy system that can be extended to reinforcement learning.
+
+## 🧠 Models Implemented
+- 🔵 Linear Regression – Predict next day’s closing price
+- 🟢 Logistic Regression – Predict up/down movement
+- 🟡 K-Nearest Neighbors – Non-parametric classification
+- 🔶 CNN (1D) – Time-window based deep learning
+- 🔷 LSTM – Sequence learning model (Best performing)
+
+## 📊 Features Used
+- `Open`, `High`, `Low`, `Close`, `Volume`
+- Target 1: Next day’s `Close`
+- Target 2: `1` if price increases, else `0`
+
+## 🧰 Libraries
+- `yfinance`, `pandas`, `scikit-learn`, `matplotlib`, `seaborn`
+- `tensorflow.keras` for CNN & LSTM
+
+## 📝 Results
+| Model        | Metric         | Value |
+|--------------|----------------|-------|
+| Linear Reg.  | MSE            | ~80–100 |
+| Logistic Reg.| Accuracy       | ~55–60% |
+| KNN          | Accuracy       | ~60% |
+| CNN          | MSE            | ~3000+ |
+| LSTM         | **MSE (Best)** | **~63.7** |
+
+## 📌 Project Highlights
+- Time windowing for deep models
+- Comparison between traditional ML and DL
+- Scaled inverse predictions for accuracy
+- Evaluation with plots and MSE
+
+## 📦 Future Work
+- Add technical indicators (SMA, RSI)
+- Integrate with OpenAI Gym for RL
+- Build a full backtesting + trading pipeline
+
+## 📽️ Demo
+A 10-minute video walk-through is included explaining the approach, code, and results.
+
+---
+**Made by [Your Name] | [LinkedIn/GitHub]**
